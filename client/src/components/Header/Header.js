@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, withRouter } from 'react-router-dom';
-import styles from './Header.module.sass';
+import {withRouter } from 'react-router-dom';
 import CONSTANTS from '../../constants';
-import { getUserAction, clearUserStore, headerRequest } from '../../actions/actionCreator';
-import HeaderLists from './HeaderLists';
+import {  clearUserStore, headerRequest } from '../../actions/actionCreator';
+
 import RenderButtons from './RenderLoginButton';
+import RenderMarkap from './RenderMarkUp';
 
 class Header extends React.Component {
   componentDidMount() {
@@ -31,31 +31,7 @@ class Header extends React.Component {
         return null;
       }
       return (
-        <div className={styles.headerContainer}>
-          <div className={styles.fixedHeader}>
-            <span className={styles.info}>Squadhelp recognized as one of the Most Innovative Companies by Inc Magazine.</span>
-            <a href="http://www.google.com">Read Announcement</a>
-          </div>
-          <div className={styles.loginSignnUpHeaders}>
-            <div className={styles.numberContainer}>
-              <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt="phone" />
-              <a  href='tel:877353585'>(877) 355-3585</a>
-            </div>
-            <div className={styles.userButtonsContainer}>
-              {this.renderLoginButtons()}
-            </div>
-          </div>
-          <div className={styles.navContainer}>
-            <Link to='/' ><img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt="blue_logo" /></Link>
-            <div className={styles.leftNav}>
-              <div className={styles.nav}>
-               <HeaderLists constatnData = {CONSTANTS}></HeaderLists>
-              </div>
-              {this.props.data && this.props.data.role !== CONSTANTS.CREATOR
-                        && <div className={styles.startContestBtn} onClick={this.startContests}>START CONTEST</div>}
-            </div>
-          </div>
-        </div>
+        <RenderMarkap  CONSTANTS={CONSTANTS} renderLoginButtons={this.renderLoginButtons()} startContests={this.startContests} data={this.props.data} />      
       );
     }
 }

@@ -148,7 +148,7 @@ export default {
           link: "http://www.google.com",
         },
         {
-          item: "NAMES BY CATEGORY",
+          item: "INTRIGUING NAMES",
           link: "http://www.google.com",
         },
         {

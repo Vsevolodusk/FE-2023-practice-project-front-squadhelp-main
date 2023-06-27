@@ -36,7 +36,7 @@ export const RenderButtons = (props) => {
                     <li>
                       <Link to="http:/www.google.com" style={{ textDecoration: 'none' }}><span>Affiliate Dashboard</span></Link>
                     </li>
-                    <li><span onClick={props.logOut}>Logout</span></li>
+                    <li><Link to='/' onClick={props.logOut} style={{ textDecoration: 'none' }}><span>Logout</span></Link></li>
                   </ul>
                 </div>
                 <img src={`${CONSTANTS.STATIC_IMAGES_PATH}email.png`} className={styles.emailIcon} alt="email" />

@@ -23,7 +23,7 @@ class Header extends React.Component {
       this.props.history.push('/startContest');
     };
 
-    renderLoginButtons = () => <RenderButtons data={this.props.data}/>;
+    renderLoginButtons = () => <RenderButtons data={this.props.data} logOut={this.logOut}/>;
 
     render() {
       if (this.props.isFetching) {

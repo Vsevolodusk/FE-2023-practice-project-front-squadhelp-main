@@ -10,10 +10,10 @@ export const RenderButtons = (props) => {
               <>
                 <div className={styles.userInfo}>
                   <img
-                    src={this.props.data.avatar === 'anon.png' ? CONSTANTS.ANONYM_IMAGE_PATH : `${CONSTANTS.publicURL}${this.props.data.avatar}`}
+                    src={props.data.avatar === 'anon.png' ? CONSTANTS.ANONYM_IMAGE_PATH : `${CONSTANTS.publicURL}${props.data.avatar}`}
                     alt="user"
                   />
-                  <span>{`Hi, ${this.props.data.displayName}`}</span>
+                  <span>{`Hi, ${props.data.displayName}`}</span>
                   <img src={`${CONSTANTS.STATIC_IMAGES_PATH}menu-down.png`} alt="menu" />
                   <ul>
                     <li>
@@ -36,7 +36,7 @@ export const RenderButtons = (props) => {
                     <li>
                       <Link to="http:/www.google.com" style={{ textDecoration: 'none' }}><span>Affiliate Dashboard</span></Link>
                     </li>
-                    <li><span onClick={this.logOut}>Logout</span></li>
+                    <li><span onClick={props.logOut}>Logout</span></li>
                   </ul>
                 </div>
                 <img src={`${CONSTANTS.STATIC_IMAGES_PATH}email.png`} className={styles.emailIcon} alt="email" />

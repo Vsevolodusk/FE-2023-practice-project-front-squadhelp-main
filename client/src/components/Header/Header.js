@@ -46,7 +46,7 @@ class Header extends React.Component {
             </div>
           </div>
           <div className={styles.navContainer}>
-            <Link to='/startContest' ><img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt="blue_logo" /></Link>
+            <Link to='/' ><img src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`} className={styles.logo} alt="blue_logo" /></Link>
             <div className={styles.leftNav}>
               <div className={styles.nav}>
                <HeaderLists constatnData = {CONSTANTS}></HeaderLists>

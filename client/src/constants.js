@@ -91,7 +91,7 @@ export default {
         },
         {
           item: "PRICING",
-          link: "http://www.google.com",
+          link: "/pricing",
         },
         {
           item: "AGENCY SERVICE",

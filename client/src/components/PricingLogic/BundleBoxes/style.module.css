@@ -1,0 +1,149 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: start;
+  justify-content: center;
+  padding: 60px 20%;
+  column-gap: 25px;
+}
+.innerWrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.pricingContainer {
+  height: 15.6rem;
+  width: 100%;
+  padding: 15px 20px;
+ transition: 0.4s all linear;
+}
+.boxName {
+  font-size: 2rem;
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.bronze {
+  border: 10px solid #e2ba97;
+  color: #e2ba97;
+}
+.gold {
+  border: 10px solid #e9bf64;
+  color: #e9bf64;
+}
+.platinum {
+  border: 10px solid #656565;
+  color: #656565;
+}
+.managed {
+  border: 10px solid #28d2d0;
+  color: #28d2d0;
+}
+
+.descriptionText {
+  color: #787878;
+  font-size: 1.4rem;
+  min-height: 75px;
+}
+.price {
+  font-size: 1.75rem;
+  text-align: right;
+  line-height: 1.42857143;
+}
+.save {
+  text-align: right;
+  font-size: 1.2rem;
+}
+.check {
+  margin-right: 5px;
+}
+.advContainer {
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.advContainer:last-of-type {
+  border: none;
+}
+.advMainText {
+  padding: 13px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.advSubText {
+  padding: 13px 0;
+  font-size: 0.9rem;
+}
+.bundleButton {
+  width: 100%;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 5px;
+}
+.bundleButton i {
+  margin-right: 5px;
+}
+.bronze_background {
+  background: #e2ba97;
+}
+.gold_background {
+  background: #e9bf64;
+}
+.platinum_background{
+  background: #656565;
+}
+.managed_background{
+  background: #28d2d0;
+}
+@media screen and (min-width : 800px) {
+  .innerWrapper:hover .pricingContainer{
+    box-shadow: -3px 4px 5px 4px rgba(0,0,0,0.75);
+  }
+}
+@media screen and (max-width: 1450px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    min-height: 1200px;
+    .bronze {
+      border: 5px solid #e2ba97;
+    }
+    .gold {
+      border: 5px solid #e9bf64;
+    }
+    .platinum {
+      border: 5px solid #656565;
+      
+    }
+    .managed {
+      border: 5px solid #28d2d0;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+    gap: 60px;
+   padding: 0 30px 0  30px;
+  }
+  .innerWrapper{
+   text-align: center;
+  }
+  .boxName {
+    display: inline-block;
+  }
+  .price {
+    font-size: 1.75rem;
+  }
+  
+}

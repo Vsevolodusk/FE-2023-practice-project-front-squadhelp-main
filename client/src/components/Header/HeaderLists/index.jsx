@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './style.module.css'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 const HeaderLists = (props) => {
   const {constatnData} = props
@@ -13,7 +14,7 @@ const HeaderLists = (props) => {
             alt="menu"
           />
           <ul className={styles.listSubMenu}>
-            {elem.linkItems.map((elem , index) => <li className={styles.listSubMenuItem} key={index}><a className={styles.subMenuItemLink} href={elem.link} >{elem.item}</a></li>)}        
+            {elem.linkItems.map((elem , index) => <li className={styles.listSubMenuItem} key={index}><Link to={elem.link} className={styles.subMenuItemLink}  >{elem.item}</Link></li>)}        
           </ul>
         </li>
       );

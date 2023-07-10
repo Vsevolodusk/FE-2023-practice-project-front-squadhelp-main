@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import styles from './BackButton.module.sass';
+import styles from './BackButton.module.css';
 
 const BackButton = (props) => {
   function clickHandler() {
@@ -8,9 +8,9 @@ const BackButton = (props) => {
   }
 
   return (
-    <div onClick={clickHandler} className={styles.buttonContainer}>
-      <span>Back</span>
-    </div>
+    <button onClick={clickHandler} className={styles.buttonContainer}>
+       Back
+    </button>
   );
 };
 

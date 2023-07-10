@@ -6,8 +6,7 @@ import { authActionRegister, clearAuth } from '../../actions/actionCreator';
 import styles from './RegistrationForm.module.sass';
 import FormInput from '../FormInput/FormInput';
 import RoleInput from '../RoleInput/RoleInput';
-import AgreeTermOfServiceInput
-  from '../AgreeTermOfServiceInput/AgreeTermOfServiceInput';
+import AgreeTermOfServiceInput from '../AgreeTermOfServiceInput/AgreeTermOfServiceInput';
 import CONSTANTS from '../../constants';
 import Schems from '../../validators/validationSchems';
 

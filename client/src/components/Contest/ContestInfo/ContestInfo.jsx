@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../Brief/Brief.module.sass';
+import styles from '../../Brief/Brief.module.css';
 import CONSTANTS from '../../../constants';
 import LogoContestSpecialInfo from './LogoContestSpecialInfo';
 import NameContestSpecialInfo from './NameContestSpecialInfo';
@@ -14,6 +14,7 @@ const ContestInfo = (props) => {
     title, focusOfWork, targetCustomer, industry, originalFileName,
     fileName, User, status,
   } = contestData;
+  console.log(contestData)
   return (
     <div className={styles.mainContestInfoContainer}>
       <div className={styles.infoContainer}>

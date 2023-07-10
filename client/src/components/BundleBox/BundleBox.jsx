@@ -1,6 +1,7 @@
 import React from 'react';
-import styles from './BundleBox.module.sass';
+import styles from './BundleBox.module.css';
 import CONSTANTS from '../../constants';
+import BundleBoxDrow from './BundleBoxDrow';
 
 const BundleBox = (props) => {
   const defaultPathToImages = `${CONSTANTS.STATIC_IMAGES_PATH}contestLabels/`;
@@ -36,22 +37,7 @@ const BundleBox = (props) => {
 
   const { setBundle, header, describe } = props;
   return (
-    <div
-      onMouseOver={mouseOverHandler}
-      onMouseOut={mouseOutHandler}
-      onClick={() => setBundle(header)}
-      id={header}
-      className={styles.bundleContainer + getBackClass()}
-    >
-      <div>
-        {renderImage()}
-      </div>
-      <div className={styles.infoContainer}>
-        <span className={styles.bundleName}>{header}</span>
-        <hr />
-        <span className={styles.infoBundle}>{describe}</span>
-      </div>
-    </div>
+    <BundleBoxDrow renderImage={renderImage} mouseOutHandler={mouseOutHandler} getBackClass={getBackClass} mouseOverHandler={mouseOverHandler} propsBundle ={{setBundle, header, describe}} />
   );
 };
 
